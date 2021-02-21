@@ -22,13 +22,13 @@ We will hash the user's password using `bcryptjs`, and use JSON Web Tokens and t
 
 ### Task 1: Project Set Up
 
-- [ ] Fork the project and clone it to your machine.
-- [ ] Set up your fork settings in Github to submit via Codegrade.
-- [ ] Create a new branch: `git checkout -b <firstName-lastName>`.
-- [ ] Implement the project on your newly created branch, committing changes regularly.
-- [ ] Push commits regularly: `git push origin <firstName-lastName>`.
-- [ ] Run the tests inside `./api/server.test.js` locally by executing `npm test`.
-- [ ] Run the Codegrade tests locally by executing `npm run codegrade`.
+- [X] Fork the project and clone it to your machine.
+- [X] Set up your fork settings in Github to submit via Codegrade.
+- [X] Create a new branch: `git checkout -b <firstName-lastName>`.
+- [X] Implement the project on your newly created branch, committing changes regularly.
+- [X] Push commits regularly: `git push origin <firstName-lastName>`.
+- [X] Run the tests inside `./api/server.test.js` locally by executing `npm test`.
+- [X] Run the Codegrade tests locally by executing `npm run codegrade`.
 
   **Important:**
 
