@@ -34,13 +34,8 @@ router.post('/register', userCheck, (req, res) => {
 router.post('./login', (req, res) => {
   const { username, password } = req.body;
 
-  function isValid(user) {
-    return Boolean(
-      user.username && user.password && typeof user.password === 'string')
-    }
-
-    if (isValid(req.body)) {
-      Users.findBy({ username: username })
+  Users.findBy({ username })
+      .first()
       .then(([user]) => {
         if (user && bcrypt.compareSync(password, user.password)) {
           const token = generateToken(user)
@@ -50,12 +45,9 @@ router.post('./login', (req, res) => {
         }
       })
       .catch(err => {
-        res.status(500).json({ message: err.message });
+        res.status(500).json({ message: 'username and password required' });
       });
-    } else {
-      res.status(400).json({ message: "username and password required"})
-    }
-  })
+  });
 
 
 function generateToken(user) {
