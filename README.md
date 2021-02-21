@@ -74,6 +74,19 @@ Submit via Codegrade. Remember to add a query string to your Webhook's Payload U
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics.
 
 1. Differences between using _sessions_ or _JSON Web Tokens_ for authentication.
+    
+    Sessions - the server will create a session for the user after the user logs in. The session id is then stored on a cookie on the user’s browser. While the user stays logged in, the cookie would be sent along with every subsequent request. The server can then compare the session id stored on the cookie against the session information stored in the memory to verify user’s identity and sends response with the corresponding state!
+
+    JSON Web Tokens - the server creates JWT with a secret and sends the JWT to the client. The client stores the JWT (usually in local storage) and includes JWT in the header with every request. The server would then validate the JWT with every request from the client and sends response.
+
 2. What does `bcryptjs` do to help us store passwords in a secure manner?
+
+    It encrypts the password so that if anyone were to gain access, they still wouldn't have people's passwords.
+
 3. How are unit tests different from integration and end-to-end testing?
+
+    Unit tests are for individual units, integration testing combines units, and end-to-end is all the units.
+
 4. How does _Test Driven Development_ change the way we write applications and tests?
+
+    Test Driven Development is when we right the tests first and then the code to pass the test, keeps it simple and bug free.
